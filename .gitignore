@@ -1,0 +1,73 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code workspace
+.claude/
+CLAUDE.md
+graphify-out/
+Documentation/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build output
+dist/
+build/
+frontend/dist/
+frontend/build/
+backend/dist/
+
+# Large media (>100MB exceeds GitHub limit; use Git LFS if needed)
+*.mov
+*.mp4
+*.mkv
+*.webm
+*.zip
+*.tar.gz
+frontend/public/login-bg.mov
+frontend/public/login-bg*.mov
+
+# Truffle / Hardhat
+blockchain/build/
+blockchain/cache/
+blockchain/artifacts/
+blockchain/coverage/
+gas-report.txt
+
+# Test / lint reports
+coverage/
+.nyc_output/
+*.lcov
+lighthouse_reports/
+
+# Local DB dumps
+*.sqlite
+*.db
+mongo-data/
+
+# Logs
+logs/
+*.log
+
+# Misc
+.cache/
+.tmp/
+*.tsbuildinfo
