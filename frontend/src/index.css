@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* WFTO-inspired color palette */
+  --wfto-teal: #2a7c7c;
+  --wfto-teal-dark: #1d5c5c;
+  --wfto-teal-deeper: #1a4a4a;
+  --wfto-coral: #e8604c;
+  --wfto-coral-hover: #d14e3a;
+  --wfto-gold: #c8a951;
+  --wfto-cream: #f7f4ef;
+  --wfto-navy: #2c3e50;
+  --color-bg: #f5f3ee;
+  --color-surface: #ffffff;
+  --color-border: #e2ddd5;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "DM Sans", system-ui, sans-serif;
+  background: var(--color-bg);
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", "DM Sans", system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #b8b0a4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94897a; }
+
+html { scroll-behavior: smooth; }
+
+/* WFTO-style utility classes */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .wfto-btn {
+    border: 2px solid currentColor;
+    border-radius: 9999px;
+    padding: 0.625rem 1.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+  }
+  .wfto-btn:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Stage colors */
+.stage-registered { color: #2a7c7c; background: #e6f3f3; }
+.stage-processed { color: #c8a951; background: #fdf8ec; }
+.stage-exported { color: #2980b9; background: #eaf4fc; }
+.stage-retailed { color: #8e44ad; background: #f5eef8; }
+.stage-sold { color: #27ae60; background: #eafaf1; }
+
+button { -webkit-user-select: none; user-select: none; }
+button:active { transform: scale(0.98); }
+*:focus-visible { outline: 2px solid var(--wfto-teal); outline-offset: 2px; border-radius: 8px; }
+
+/* WFTO section divider */
+.wfto-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--wfto-coral);
+  margin: 1rem 0;
+}
+
+/* Toast slide-in animation */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
