@@ -439,7 +439,7 @@ The wallet must hold the correct role assigned by the Admin via <code>assignRole
 
 ## 🛣 Future work
 
-- 🌐 **Sepolia testnet deployment** + Etherscan source verification
+- 🌐 **Truffle testnet deployment** + Etherscan source verification
 - 📎 **IPFS evidence anchoring** for off-chain documents (lab reports, photos)
 - 🔐 **Multi-signature admin governance** contract
 - 🪪 **Sign-then-verify nonce challenge** for wallet login (currently: raw address)
